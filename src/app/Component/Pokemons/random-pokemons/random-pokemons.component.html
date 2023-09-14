@@ -1,0 +1,39 @@
+<div class="container">
+ <div *ngIf="pokemon" class="row">
+  <div class="col-md-4">
+    <img src="{{pokemon.picture}}" class="w-100"/>
+  </div>
+  <div class="col-md-8">
+    <div class="table-responsive">
+      <table class="table table-striped-columns
+      table-hover	
+      table-borderless
+      table-primary
+      align-middle">
+        <thead class="table-light">
+          <caption></caption>
+          <tr>
+            <th>Nom </th>
+            <th>Valeur</th>
+          </tr>
+          </thead>
+          <tbody class="table-group-divider">
+            <tr class="table-primary" >
+              <td scope="row">Name</td> 
+              <td>{{pokemon.name}}</td>
+            </tr>
+            <tr class="table-info" >
+              <td scope="row">Point</td>
+              <td>{{pokemon.cp}}</td>
+            </tr>
+            <tr class="table-info" >
+              <td scope="row">Date</td>
+              <td>{{pokemon.created |date:"MM/YYYY"}}</td>
+            </tr>
+          </tbody>
+      </table>
+    </div>
+    
+  </div>
+ </div>
+</div>
