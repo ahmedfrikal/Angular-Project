@@ -10,6 +10,7 @@ import {FormsModule} from "@angular/forms";
 import { PokemonFormComponent } from '../Component/Pokemons/pokemon-form/pokemon-form.component';
 import { EditPokemonComponent } from '../Component/Pokemons/edit-pokemon/edit-pokemon.component';
 import { AddPokemonsComponent } from '../Component/Pokemons/add-pokemons/add-pokemons.component';
+import { SearchPokemonComponent } from '../Component/Pokemons/search-pokemon/search-pokemon.component';
 
 const pokemonRoutes:Routes=[
   {path:'Pokemons',component:ListPokemonsComponent},
@@ -27,6 +28,7 @@ const pokemonRoutes:Routes=[
     RandomPokemonsComponent,
     EditPokemonComponent,
     AddPokemonsComponent,
+    SearchPokemonComponent,
     BorderCardDirective,
     PokemonTypeColorPipe
   ],

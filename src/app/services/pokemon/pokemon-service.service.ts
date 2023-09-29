@@ -46,6 +46,15 @@ export class PokemonServiceService {
       catchError((error) => this.error.handelError(error, null))
     );
   }
+  FindPokemonByNameContains(term:string):Observable<Pokemon[]>{
+    if(term.length<=1){
+      return of([]);
+    }
+    return this.http.get<Pokemon[]>(`api/pokemons/?name=${term}`).pipe(
+      tap((pokemon)=>console.log(pokemon)),
+      catchError((errore)=>this.error.handelError(errore,[]))
+    );
+  }
   deletePokemon(pokemonId: number) {
     return this.http.delete(`api/pokemons/${pokemonId}`).pipe(
       tap((response)=>this.succes.log(response)),

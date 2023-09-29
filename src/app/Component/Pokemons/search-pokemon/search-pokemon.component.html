@@ -1,0 +1,19 @@
+<div class="card  mt-5">
+    <h2 class="text-center"> Rechercher Pokemons </h2>
+    <div class="card-body">
+        <div class="mb-3">
+            <label for="" class="form-label">Name </label>
+            <input type="text" placeholder="Rechercher pokemon" class="form-control" #searchBox
+                (keyup)="search(searchBox.value)" />
+           
+            <ul class="list-group list-group-flush">
+                <li *ngFor="let pokemon of pokemons$ |async" (click)="goToDetail(pokemon)" class="list-group-item">
+                    <a >
+                        {{pokemon.name}}
+                    </a>
+                </li>
+
+            </ul>
+        </div>
+    </div>
+</div>

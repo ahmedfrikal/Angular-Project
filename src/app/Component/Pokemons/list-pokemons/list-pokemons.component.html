@@ -4,6 +4,7 @@
     <button (click)="addPokemon()" class="btn btn-warning" >
             Ajouter Pokemon
     </button>
+    <app-search-pokemon></app-search-pokemon>
     <!-- Utiliser la directive par le nom pkmBorderCard -->
     <div *ngFor="let pokemons of pokemonList" class="col-md-6" pkmBorderCard="black">
     <div class="card mb-3 w-100" (click)="DetailsPokemon(pokemons.id)">

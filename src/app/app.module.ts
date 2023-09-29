@@ -9,11 +9,13 @@ import { FormsModule } from '@angular/forms';
 import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
 import { InMemoryDataService } from './services/in-memory-data.service';
 import {HttpClientModule} from "@angular/common/http";
+import { LoaderComponent } from './Component/loader/loader.component';
 
 @NgModule({
   declarations: [
    AppComponent,
    PageNotFoundComponent,
+   LoaderComponent,
   ],
   imports: [
     BrowserModule,
